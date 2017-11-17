@@ -2,6 +2,6 @@
 
 <ul>
     @foreach($products as $product)
-        <li>{{ $product->name }}</li>
+                <li><a href='{{ route('admin.product', array('id' => $product->id)) }}'>{{ $product->name }}</a></li>
     @endforeach
 </ul>

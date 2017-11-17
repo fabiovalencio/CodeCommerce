@@ -38,7 +38,14 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
+                <div class="title">Menu</div>
+            </div>
+
+            <div>
+                <ul>
+                    <li><a href='/admin/categories'>Category</a></li>
+                    <li><a href='/admin/products'>Products</a></li>
+                </ul>
             </div>
         </div>
     </body>
