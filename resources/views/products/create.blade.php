@@ -15,6 +15,11 @@
         {!! Form::open(['route'=>'products.store']) !!}
 
         <div class="form-group">
+            {!! Form::label('category', 'Category:') !!}
+            {!! Form::select('category_id', $categories, null, ['class'=>'form-control']) !!}
+        </div>
+
+        <div class="form-group">
             {!! Form::label('name', 'Name:') !!}
             {!! Form::text('name', null, ['class'=>'form-control']) !!}
         </div>
@@ -31,12 +36,10 @@
 
         <div class="form-group">
             {!! Form::label('featured', 'Featured:') !!}
-            {!! Form::checkbox('featured') !!}
-        </div>
+            {!! Form::checkbox('featured', null, null, ['class' => 'field']) !!}
 
-        <div class="form-group">
             {!! Form::label('recommend', 'Recommend:') !!}
-            {!! Form::checkbox('recommend') !!}
+            {!! Form::checkbox('recommend', null, null, ['class' => 'field']) !!}
         </div>
 
         <div class="form-group">

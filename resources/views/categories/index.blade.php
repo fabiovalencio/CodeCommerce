@@ -27,6 +27,9 @@
                 </tr>
             @endforeach
         </table>
+        <div class="span6 pull-right">
+            {!! $categories->render() !!}
+        </div>
     </div>
 
 @endsection
