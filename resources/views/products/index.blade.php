@@ -30,6 +30,7 @@
                     <td>{{ $product->category->name }}</td>
                     <td>
                         <a href="{{ route('products.destroy', ['id'=>$product->id]) }}">Delete</a> |
+                        <a href="{{ route('products.images', ['id'=>$product->id]) }}">Image</a> |
                         <a href="{{ route('products.edit', ['id'=>$product->id]) }}">Edit</a>
                     </td>
                 </tr>
