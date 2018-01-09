@@ -70,10 +70,10 @@ return [
 
         's3' => [
             'driver' => 's3',
-            'key'    => 'AKIAIYTYUTOMJXWDBBPA',
-            'secret' => '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',
-            'region' => 'sa-east-1',
-            'bucket' => 'trawius',
+            'key'    => getenv('S3_KEY'),
+            'secret' => getenv('S3_SECRET'),
+            'region' => getenv('S3_REGION'),
+            'bucket' => getenv('S3_BUCKET'),
         ],
 
         'rackspace' => [

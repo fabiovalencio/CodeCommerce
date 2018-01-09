@@ -40,12 +40,6 @@ Route::group(['prefix'=>'admin'], function(){
         });
     });
 
-
 });
-
-
-
-
-
 
 Route::pattern('id', '[0,9]+');
