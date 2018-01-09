@@ -21,7 +21,8 @@
                 <tr>
                     <td>{{ $image->id }}</td>
                     <td>
-                        <img src="{{ url('upload/'.$image->id.'.'.$image->extension) }}" width='80'>
+                        <img src="{{ '	https://s3-sa-east-1.amazonaws.com/trawius/'.$image->id.'.'.$image->extension }}" width='80'>
+                        {{--<img src="{{ Storage::disk('s3')->get($image->id.'.'.$image->extension) }}" width='80'>--}}
                     </td>
                     <td>{{ $image->extension }}</td>
                     <td>

@@ -99,7 +99,7 @@ class ProductsController extends Controller
 
         $image = $productImage::create(['product_id'=>$id, 'extension'=>$extension]);
 
-        Storage::disk('public_local')->put($image->id.'.'.$extension, File::get($file));
+        Storage::disk('s3')->put($image->id.'.'.$extension, File::get($file), 'public');
 
         return redirect()->route('products.images', ['id'=>$id]);
     }
@@ -108,14 +108,15 @@ class ProductsController extends Controller
     {
         $image = $productImage->find($id);
 
-        if(file_exists(public_path() . '/upload/' . $image->id.'.'. $image->extension)) {
-            Storage::disk('public_local')->delete($image->id.'.'. $image->extension);
+        $file = $image->id.'.'. $image->extension;
+
+        if(Storage::disk('s3')->get($file)) {
+            Storage::disk('s3')->delete($file);
+            $image->delete();
         }
 
-
         $product = $image->product;
-        $image->delete();
 
-        return redirect()->route('products.images', ['id'=>$id]);
+        return redirect()->route('products.images', ['id'=>$product]);
     }
 }

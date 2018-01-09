@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => 'local',
+    'default' => 's3',
 
     /*
     |--------------------------------------------------------------------------
@@ -29,6 +29,7 @@ return [
     */
 
     'cloud' => 's3',
+
 
     /*
     |--------------------------------------------------------------------------
@@ -69,10 +70,10 @@ return [
 
         's3' => [
             'driver' => 's3',
-            'key'    => 'your-key',
-            'secret' => 'your-secret',
-            'region' => 'your-region',
-            'bucket' => 'your-bucket',
+            'key'    => 'AKIAIYTYUTOMJXWDBBPA',
+            'secret' => 'Xb/9jZYB7cJoZOtmDV+FEDmETmX9QY3eVUQ6ui3n',
+            'region' => 'sa-east-1',
+            'bucket' => 'trawius',
         ],
 
         'rackspace' => [
